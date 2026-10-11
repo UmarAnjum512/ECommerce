@@ -26,19 +26,28 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Database connect (serverless-safe: har request par check, already connected ho to skip)
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/Mirha_fashion';
+// Database connect (Vercel serverless ke liye: connection cache hota hai)
+const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/fatima_khan_db';
+let connectionPromise = null;
+
 const connectDB = async () => {
   if (mongoose.connection.readyState === 1) return;
-  await mongoose.connect(MONGO_URI);
+  if (!connectionPromise) {
+    connectionPromise = mongoose.connect(MONGO_URI).catch((err) => {
+      connectionPromise = null; // agle request par dobara koshish ho
+      throw err;
+    });
+  }
+  await connectionPromise;
 };
+
 app.use(async (req, res, next) => {
   try {
     await connectDB();
     next();
   } catch (err) {
     console.error('❌ MongoDB Connection Error:', err.message);
-    res.status(500).json({ message: 'Database connection failed' });
+    res.status(500).json({ message: 'Database connection failed', error: err.message });
   }
 });
 
@@ -54,11 +63,17 @@ app.use('/api/banners', bannerRoutes);
 app.use('/api/inquiries', inquiryRoutes);
 app.use('/api/upload', uploadRoutes);
 
-app.get('/', (req, res) => res.json({ status: 'ok', message: 'Mirha Fashion API running' }));
+// Root + health check
+app.get('/', (req, res) => {
+  res.json({ status: 'ok', message: 'API running' });
+});
 
-// Health check
 app.get('/api/health', (req, res) => {
-  res.json({ status: 'ok', store: 'Mirha Fashion API', time: new Date() });
+  res.json({
+    status: 'ok',
+    db: mongoose.connection.readyState === 1 ? 'connected' : 'not connected',
+    time: new Date(),
+  });
 });
 
 // Error handling
@@ -67,10 +82,10 @@ app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 
-// Local par server chalao; Vercel par sirf app export hoti hai
+// Local par server chalta hai; Vercel par sirf app export hoti hai
 if (!process.env.VERCEL) {
   app.listen(PORT, () => {
-    console.log(`🚀 Mirha Fashion Server running on port ${PORT}`);
+    console.log(`🚀 Server running on port ${PORT} in ${process.env.NODE_ENV || 'development'} mode`);
   });
 }
 
