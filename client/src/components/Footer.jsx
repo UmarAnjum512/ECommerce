@@ -83,7 +83,7 @@ export default function Footer() {
                   <Instagram className="w-4 h-4" />
                 </a>
                 <a
-                  href="https://www.facebook.com/mirhafashion"
+                  href="https://www.facebook.com/profile.php?id=100053274846776"
                   target="_blank"
                   rel="noreferrer"
                   className="hover:text-white transition p-1"
@@ -92,7 +92,7 @@ export default function Footer() {
                   <Facebook className="w-4 h-4" />
                 </a>
                 <a
-                  href="https://www.youtube.com/channel/UCo4x9FmK0p_JEAu7AnQL0Zg"
+                  href="https://www.youtube.com/@MirhaFashion-t8d"
                   target="_blank"
                   rel="noreferrer"
                   className="hover:text-white transition p-1"
