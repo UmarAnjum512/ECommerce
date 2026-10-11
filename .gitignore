@@ -1,0 +1,59 @@
+# Dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Environment variables (secrets - kabhi push mat karo)
+.env
+.env.*
+!.env.example
+client/.env
+client/.env.*
+server/.env
+server/.env.*
+!client/.env.example
+!server/.env.example
+# Build output
+dist/
+client/dist/
+build/
+.vite/
+
+# Uploaded images (local uploads)
+server/uploads/*
+!server/uploads/.gitkeep
+
+# Vercel
+.vercel/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Runtime / cache
+.cache/
+.parcel-cache/
+.eslintcache
+*.tsbuildinfo
+coverage/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.suo
+
+# Zip / backups
+*.zip
+*.rar
+*.bak
