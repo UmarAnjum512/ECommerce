@@ -17,7 +17,7 @@ export default function Footer() {
     try {
       await axios.post('/api/inquiries', { email, type: 'newsletter' });
       setSubmitted(true);
-      setMsg('Thank you for subscribing to Fatima Khan Official.');
+      setMsg('Thank you for subscribing to Mirha Fashion.');
       setEmail('');
     } catch (err) {
       setMsg('Thank you for subscribing!');
@@ -30,14 +30,14 @@ export default function Footer() {
   return (
     <footer className="bg-neutral-900 text-neutral-300 pt-16 pb-10 border-t border-neutral-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 pb-12 border-b border-neutral-800 text-xs">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 pb-12 border-b border-neutral-800 text-xs">
           {/* Column 1: About Us */}
           <div className="space-y-4">
             <h4 className="font-serif text-sm uppercase tracking-widest text-white font-medium border-b border-neutral-800 pb-2 inline-block">
               ABOUT US
             </h4>
             <p className="text-neutral-400 leading-relaxed font-light">
-              Fatima Khan is a luxury clothing label founded by Fatima Khan in 2012. The Fatima Khan label is best known for their exclusive style, creative fabric techniques, fascinating colors, and prestigious look.
+              Mirha Fashion is a luxury clothing label founded by Mirha Fashion in 2012. The Mirha Fashion label is best known for their exclusive style, creative fabric techniques, fascinating colors, and prestigious look.
             </p>
             <p className="text-neutral-400 leading-relaxed font-light">
               Our aim is to provide latest fashionable trends and exclusive clothing which express the emotion of joy and happiness.
@@ -74,7 +74,7 @@ export default function Footer() {
               </span>
               <div className="flex space-x-4 text-neutral-400">
                 <a
-                  href="https://www.instagram.com/fatimakhanfashion/"
+                  href="https://www.instagram.com/mirhafashion/"
                   target="_blank"
                   rel="noreferrer"
                   className="hover:text-white transition p-1"
@@ -83,7 +83,7 @@ export default function Footer() {
                   <Instagram className="w-4 h-4" />
                 </a>
                 <a
-                  href="https://www.facebook.com/Fatima-Khan-100860285380385"
+                  href="https://www.facebook.com/mirhafashion"
                   target="_blank"
                   rel="noreferrer"
                   className="hover:text-white transition p-1"
@@ -141,14 +141,14 @@ export default function Footer() {
             </form>
 
             <div className="pt-3 text-[11px] text-neutral-500">
-              WhatsApp Concierge: <span className="text-neutral-300 font-mono">+92 303 3333705</span>
+              WhatsApp Concierge: <span className="text-neutral-300 font-mono">+92 317 2043468</span>
             </div>
           </div>
         </div>
 
         {/* Bottom copyright line */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-neutral-500 font-light">
-          <p>© 2026 FATIMA KHAN OFFICIAL. ALL RIGHTS RESERVED.</p>
+          <p>© 2026 MIRHA FASHION. ALL RIGHTS RESERVED.</p>
           <div className="flex space-x-4 mt-3 sm:mt-0">
             <span>Pakistani Luxury Couture</span>
             <span>•</span>

@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 @layer base {
+  html, body { overflow-x: hidden; max-width: 100%; }
+  img { max-width: 100%; }
   body {
     @apply text-neutral-800 antialiased bg-white;
     font-family: 'Montserrat', sans-serif;

@@ -52,7 +52,7 @@ export default function ProductCard({ product }) {
           loading="lazy"
         />
 
-        {/* Hover Secondary Image (Fatima Khan style dual image flip) */}
+        {/* Hover Secondary Image (Mirha Fashion style dual image flip) */}
         {secondImg && (
           <img
             src={secondImg}

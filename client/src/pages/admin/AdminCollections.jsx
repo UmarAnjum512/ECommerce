@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useAuth } from '../../context/AuthContext';
 import { Plus, Trash2, X, FolderTree } from 'lucide-react';
+import ImageUploader from '../../components/ImageUploader';
 
 export default function AdminCollections() {
   const { user } = useAuth();
@@ -139,15 +140,8 @@ export default function AdminCollections() {
               </div>
 
               <div>
-                <label className="block text-neutral-600 mb-1">Banner Image URL *</label>
-                <input
-                  type="text"
-                  required
-                  placeholder="https://...banner.jpeg"
-                  value={bannerImage}
-                  onChange={(e) => setBannerImage(e.target.value)}
-                  className="w-full border border-neutral-300 p-2 focus:border-black focus:outline-none font-mono text-[11px]"
-                />
+                <label className="block text-neutral-600 mb-1">Banner Image *</label>
+                <ImageUploader required value={bannerImage} onChange={setBannerImage} />
               </div>
 
               <div>

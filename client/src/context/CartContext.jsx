@@ -96,10 +96,10 @@ export const CartProvider = ({ children }) => {
 
   const applyCoupon = (code) => {
     const cleaned = code.trim().toUpperCase();
-    if (cleaned === 'FATIMA10') {
+    if (cleaned === 'MIRHA10') {
       setDiscountPercent(10);
       setCouponCode(cleaned);
-      setCouponMessage('Coupon FATIMA10 applied! 10% discount.');
+      setCouponMessage('Coupon MIRHA10 applied! 10% discount.');
       return { success: true, message: '10% discount applied!' };
     } else if (cleaned === 'LUXURY20') {
       setDiscountPercent(20);

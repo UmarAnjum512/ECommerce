@@ -1,7 +1,7 @@
 {
-  "name": "fatima-khan-server",
+  "name": "mirha-fashion-server",
   "version": "1.0.0",
-  "description": "Backend API for Fatima Khan Official luxury clothing store",
+  "description": "Backend API for Mirha Fashion luxury clothing store",
   "main": "server.js",
   "type": "module",
   "scripts": {
@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "cloudinary": "^2.5.1",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",

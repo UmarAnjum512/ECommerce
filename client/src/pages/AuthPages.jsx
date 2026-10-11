@@ -111,7 +111,7 @@ export function Login() {
         </div>
 
         <div className="mt-6 text-center text-xs text-neutral-500">
-          New to Fatima Khan Official?{' '}
+          New to Mirha Fashion?{' '}
           <Link to="/register" className="font-semibold text-neutral-900 underline">
             Create Account
           </Link>

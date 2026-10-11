@@ -47,7 +47,7 @@ export default function ClientDiaries() {
             CLIENT DIARIES
           </h1>
           <p className="text-xs text-neutral-500 font-light mt-2 max-w-md mx-auto">
-            Graceful women around the globe adorned in timeless Fatima Khan Couture.
+            Graceful women around the globe adorned in timeless Mirha Fashion Couture.
           </p>
         </div>
 
@@ -62,7 +62,7 @@ export default function ClientDiaries() {
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                   <a
-                    href="https://www.instagram.com/fatimakhanfashion/"
+                    href="https://www.instagram.com/mirhafashion/"
                     target="_blank"
                     rel="noreferrer"
                     className="p-3 bg-white text-black rounded-full shadow-lg hover:scale-110 transition"
@@ -82,10 +82,10 @@ export default function ClientDiaries() {
         <div className="mt-16 p-8 bg-neutral-900 text-white text-center">
           <h3 className="font-serif text-xl uppercase tracking-widest mb-2 font-normal">Share Your Moment</h3>
           <p className="text-xs text-neutral-300 font-light max-w-md mx-auto mb-4">
-            Tag <span className="font-mono text-fk-gold">@fatimakhanfashion</span> on Instagram to be featured in our Client Diaries editorial.
+            Tag <span className="font-mono text-fk-gold">@mirhafashion</span> on Instagram to be featured in our Client Diaries editorial.
           </p>
           <a
-            href="https://www.instagram.com/fatimakhanfashion/"
+            href="https://www.instagram.com/mirhafashion/"
             target="_blank"
             rel="noreferrer"
             className="inline-block py-2.5 px-6 bg-white text-black text-xs uppercase tracking-widest font-semibold hover:bg-neutral-200 transition"

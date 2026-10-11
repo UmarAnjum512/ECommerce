@@ -40,28 +40,28 @@ export default function Home() {
 
       {/* 2. Brand Value Highlights Bar */}
       <div className="border-b border-neutral-100 bg-neutral-50 py-5">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-x-3 gap-y-4 text-center">
           <div className="flex items-center justify-center space-x-2 text-neutral-800">
             <Truck className="w-4 h-4 text-fk-gold" />
-            <span className="text-[11px] uppercase tracking-wider font-medium">Worldwide Shipping</span>
+            <span className="text-[10px] sm:text-[11px] uppercase tracking-wider font-medium text-left sm:text-center">Worldwide Shipping</span>
           </div>
           <div className="flex items-center justify-center space-x-2 text-neutral-800">
             <Sparkles className="w-4 h-4 text-fk-gold" />
-            <span className="text-[11px] uppercase tracking-wider font-medium">Artisanal Zardozi Handwork</span>
+            <span className="text-[10px] sm:text-[11px] uppercase tracking-wider font-medium text-left sm:text-center">Artisanal Zardozi Handwork</span>
           </div>
           <div className="flex items-center justify-center space-x-2 text-neutral-800">
             <Clock className="w-4 h-4 text-fk-gold" />
-            <span className="text-[11px] uppercase tracking-wider font-medium">Express Ready to Ship</span>
+            <span className="text-[10px] sm:text-[11px] uppercase tracking-wider font-medium text-left sm:text-center">Express Ready to Ship</span>
           </div>
           <div className="flex items-center justify-center space-x-2 text-neutral-800">
             <ShieldCheck className="w-4 h-4 text-fk-gold" />
-            <span className="text-[11px] uppercase tracking-wider font-medium">100% Pure Silk Fabrics</span>
+            <span className="text-[10px] sm:text-[11px] uppercase tracking-wider font-medium text-left sm:text-center">100% Pure Silk Fabrics</span>
           </div>
         </div>
       </div>
 
-      {/* 3. Section: LATEST COLLECTION (Matching fatimakhanofficial.com) */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      {/* 3. Section: LATEST COLLECTION (matching reference) */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-3 border-b border-neutral-200">
           <div>
             <span className="text-[10px] uppercase tracking-widest3 text-neutral-400 font-medium block">
@@ -99,21 +99,21 @@ export default function Home() {
         )}
       </section>
 
-      {/* 4. Feature Banner: FORMALS SPOTLIGHT (Matching fatimakhanofficial.com) */}
-      <section className="bg-neutral-50 py-16 border-y border-neutral-200">
+      {/* 4. Feature Banner: FORMALS SPOTLIGHT (matching reference) */}
+      <section className="bg-neutral-50 py-10 md:py-16 border-y border-neutral-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Banner Hero Card */}
-          <div className="relative mb-12 overflow-hidden bg-neutral-900 aspect-[21/9] max-h-[460px] group">
+          <div className="relative mb-10 md:mb-12 overflow-hidden bg-neutral-900 w-full h-[380px] sm:h-[420px] md:h-[460px] group">
             <img
               src="https://www.fatimakhanofficial.com/images/thumbs/0008357_bvcbvcn.jpeg"
-              alt="Fatima Khan Formals"
+              alt="Mirha Fashion Formals"
               className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-1000"
             />
-            <div className="absolute inset-0 bg-black bg-opacity-30 flex flex-col items-center justify-center text-center p-6 text-white">
+            <div className="absolute inset-0 bg-black bg-opacity-30 flex flex-col items-center justify-center text-center px-5 py-6 text-white">
               <span className="text-[10px] md:text-xs uppercase tracking-widest3 text-neutral-300 mb-2">
                 Haute Couture & Heritage
               </span>
-              <h2 className="font-serif text-3xl md:text-5xl tracking-widest uppercase font-normal mb-3">
+              <h2 className="font-serif text-3xl md:text-5xl tracking-wider md:tracking-widest uppercase font-normal mb-3">
                 FORMALS
               </h2>
               <p className="text-xs md:text-sm font-light max-w-lg tracking-wider text-neutral-200 mb-6 px-4">
@@ -221,20 +221,20 @@ export default function Home() {
       </section>
 
       {/* 6. Brand Story & Craftsmanship Showcase */}
-      <section className="bg-neutral-900 text-white py-20 border-t border-neutral-800">
+      <section className="bg-neutral-900 text-white py-14 md:py-20 border-t border-neutral-800">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <span className="text-[10px] uppercase tracking-widest3 text-fk-gold font-semibold block mb-2">
             HEIRLOOM HERITAGE
           </span>
-          <h2 className="font-serif text-3xl md:text-4xl tracking-widest uppercase font-normal mb-6">
-            THE ART OF FATIMA KHAN COUTURE
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl tracking-wider md:tracking-widest uppercase font-normal mb-6">
+            THE ART OF MIRHA FASHION COUTURE
           </h2>
           <div className="w-16 h-px bg-fk-gold mx-auto mb-6"></div>
           <p className="text-neutral-300 text-xs md:text-sm font-light leading-relaxed tracking-wider mb-8">
-            Founded in 2012, the Fatima Khan label has defined contemporary Pakistani haute couture. Renowned for innovative fabric manipulations, rich hand-woven raw silks, intricate kora and dabka needlesmithing, each garment is handcrafted by master artisans to deliver timeless elegance and prestigious celebration.
+            Founded in 2012, the Mirha Fashion label has defined contemporary Pakistani haute couture. Renowned for innovative fabric manipulations, rich hand-woven raw silks, intricate kora and dabka needlesmithing, each garment is handcrafted by master artisans to deliver timeless elegance and prestigious celebration.
           </p>
           <a
-            href="https://wa.me/923033333705?text=Hello%20Fatima%20Khan%20Official,%20I%20would%20like%20to%20inquire%20about%20a%20bespoke%20bridal/formal%20appointment"
+            href="https://wa.me/923172043468?text=Hello%20Mirha%20Fashion,%20I%20would%20like%20to%20inquire%20about%20a%20bespoke%20bridal/formal%20appointment"
             target="_blank"
             rel="noreferrer"
             className="inline-block py-3 px-8 bg-transparent text-white border border-white text-xs uppercase tracking-widest font-semibold hover:bg-white hover:text-black transition duration-300"

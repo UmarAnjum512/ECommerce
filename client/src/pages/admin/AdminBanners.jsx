@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useAuth } from '../../context/AuthContext';
 import { Plus, Trash2, X, Image as ImageIcon } from 'lucide-react';
+import ImageUploader from '../../components/ImageUploader';
 
 export default function AdminBanners() {
   const { user } = useAuth();
@@ -112,7 +113,7 @@ export default function AdminBanners() {
 
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-60">
-          <div className="bg-white max-w-md w-full p-6 shadow-2xl border border-neutral-200">
+          <div className="bg-white max-w-md w-full max-h-[90vh] overflow-y-auto p-5 sm:p-6 shadow-2xl border border-neutral-200">
             <div className="flex justify-between items-center pb-3 border-b border-neutral-200 mb-4">
               <h3 className="font-serif text-lg uppercase tracking-wider text-neutral-900 font-medium">
                 Add Runway Banner
@@ -146,26 +147,13 @@ export default function AdminBanners() {
               </div>
 
               <div>
-                <label className="block text-neutral-600 mb-1">Desktop Image URL *</label>
-                <input
-                  type="text"
-                  required
-                  placeholder="https://...desktop.jpeg"
-                  value={formData.desktopImage}
-                  onChange={(e) => setFormData({ ...formData, desktopImage: e.target.value })}
-                  className="w-full border border-neutral-300 p-2 focus:border-black focus:outline-none font-mono text-[11px]"
-                />
+                <label className="block text-neutral-600 mb-1">Desktop Image *</label>
+                <ImageUploader required value={formData.desktopImage} onChange={(url) => setFormData({ ...formData, desktopImage: url })} />
               </div>
 
               <div>
-                <label className="block text-neutral-600 mb-1">Mobile Image URL (Optional)</label>
-                <input
-                  type="text"
-                  placeholder="https://...mobile.jpeg"
-                  value={formData.mobileImage}
-                  onChange={(e) => setFormData({ ...formData, mobileImage: e.target.value })}
-                  className="w-full border border-neutral-300 p-2 focus:border-black focus:outline-none font-mono text-[11px]"
-                />
+                <label className="block text-neutral-600 mb-1">Mobile Image (Optional)</label>
+                <ImageUploader value={formData.mobileImage} onChange={(url) => setFormData({ ...formData, mobileImage: url })} />
               </div>
 
               <div className="grid grid-cols-2 gap-4">

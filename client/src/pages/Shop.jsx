@@ -73,7 +73,7 @@ export default function Shop() {
       <div className="border-b border-neutral-200 py-10 bg-neutral-50 text-center">
         <div className="max-w-7xl mx-auto px-4">
           <span className="text-[10px] uppercase tracking-widest3 text-neutral-400 font-medium block mb-1">
-            Fatima Khan Official Collection
+            Mirha Fashion Collection
           </span>
           <h1 className="font-serif text-3xl md:text-4xl tracking-widest uppercase text-neutral-900 font-normal">
             {keyword ? `Search: "${keyword}"` : currentCollection !== 'All' ? currentCollection : currentCategory !== 'All' ? currentCategory : 'ALL COLLECTIONS'}

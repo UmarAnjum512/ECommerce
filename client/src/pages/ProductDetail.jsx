@@ -51,7 +51,7 @@ export default function ProductDetail() {
   if (loading) {
     return (
       <div className="max-w-7xl mx-auto px-4 py-20 animate-pulse">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           <div className="bg-neutral-100 aspect-[3/4] w-full"></div>
           <div className="space-y-4">
             <div className="h-8 bg-neutral-100 w-3/4"></div>
@@ -105,7 +105,7 @@ export default function ProductDetail() {
   };
 
   const whatsappMessage = encodeURIComponent(
-    `Hello Fatima Khan Official! I want to inquire about: "${product.title}" (${product.sku}). ` +
+    `Hello Mirha Fashion! I want to inquire about: "${product.title}" (${product.sku}). ` +
     `Size: ${selectedSize}, Height: ${selectedHeight}. Total: $${unitPrice}. URL: ${window.location.href}`
   );
 
@@ -212,7 +212,7 @@ export default function ProductDetail() {
                 </div>
               </div>
 
-              {/* HEIGHT / SHIRT LENGTH SELECTOR (Fatima Khan signature!) */}
+              {/* HEIGHT / SHIRT LENGTH SELECTOR (Mirha Fashion signature!) */}
               {product.heightOptions && product.heightOptions.length > 0 && (
                 <div className="my-5">
                   <div className="flex justify-between items-center text-xs mb-2">
@@ -310,7 +310,7 @@ export default function ProductDetail() {
 
               {/* Direct WhatsApp Inquiry Button */}
               <a
-                href={`https://wa.me/923033333705?text=${whatsappMessage}`}
+                href={`https://wa.me/923172043468?text=${whatsappMessage}`}
                 target="_blank"
                 rel="noreferrer"
                 className="w-full py-3 bg-green-600 hover:bg-green-700 text-white text-xs uppercase tracking-widest font-semibold flex items-center justify-center space-x-2 transition shadow-md"

@@ -46,39 +46,39 @@ export default function HeroSlider({ banners = [] }) {
   };
 
   return (
-    <div className="relative w-full overflow-hidden bg-neutral-900 group aspect-[16/9] md:aspect-[21/9] max-h-[720px]">
+    <div className="relative w-full overflow-hidden bg-neutral-900 group h-[460px] sm:h-[520px] md:h-auto md:aspect-[21/9] md:max-h-[720px]">
       {slides.map((slide, idx) => (
         <div
           key={idx}
           className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-            idx === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
+            idx === currentIndex ? 'opacity-100 z-10 visible' : 'opacity-0 z-0 invisible pointer-events-none'
           }`}
         >
           {/* Picture element for responsive desktop / mobile banners */}
-          <picture>
+          <picture className="block w-full h-full">
             <source media="(min-width: 768px)" srcSet={slide.desktopImage} />
             <img
               src={slide.mobileImage || slide.desktopImage}
-              alt={slide.title || 'Fatima Khan Banner'}
+              alt={slide.title || 'Mirha Fashion Banner'}
               className="w-full h-full object-cover object-center"
             />
           </picture>
 
           {/* Luxury Text Overlay */}
-          <div className="absolute inset-0 bg-black bg-opacity-25 flex flex-col items-center justify-end md:justify-center p-6 md:p-12 text-center text-white pb-12 md:pb-0">
+          <div className="absolute inset-0 bg-black bg-opacity-25 flex flex-col items-center justify-end md:justify-center px-5 pt-6 pb-14 md:p-12 text-center text-white">
             {slide.title && (
-              <h2 className="font-serif text-2xl sm:text-4xl lg:text-5xl tracking-widest uppercase mb-2 font-normal drop-shadow-md">
+              <h2 className="font-serif text-xl sm:text-4xl lg:text-5xl tracking-wider sm:tracking-widest uppercase mb-2 leading-snug font-normal drop-shadow-md">
                 {slide.title}
               </h2>
             )}
             {slide.subtitle && (
-              <p className="text-xs sm:text-sm tracking-widest uppercase font-light max-w-xl mb-6 text-neutral-200 drop-shadow">
+              <p className="text-[11px] sm:text-sm tracking-wider sm:tracking-widest uppercase font-light max-w-xl mb-5 sm:mb-6 text-neutral-200 drop-shadow">
                 {slide.subtitle}
               </p>
             )}
             <Link
               to={slide.link || '/shop'}
-              className="inline-block py-2.5 px-8 bg-white text-black text-xs uppercase tracking-widest font-semibold hover:bg-black hover:text-white transition-colors duration-300 shadow-lg border border-white"
+              className="inline-block py-2.5 px-6 sm:px-8 bg-white text-black text-xs uppercase tracking-widest font-semibold hover:bg-black hover:text-white transition-colors duration-300 shadow-lg border border-white"
             >
               Explore Collection
             </Link>
@@ -89,7 +89,7 @@ export default function HeroSlider({ banners = [] }) {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-2 text-white bg-black bg-opacity-40 hover:bg-opacity-80 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-2 text-white bg-black bg-opacity-40 hover:bg-opacity-80 rounded-full opacity-0 md:group-hover:opacity-100 hidden md:block transition-all duration-300"
         aria-label="Previous Slide"
       >
         <ChevronLeft className="w-6 h-6" />
@@ -97,7 +97,7 @@ export default function HeroSlider({ banners = [] }) {
 
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-2 text-white bg-black bg-opacity-40 hover:bg-opacity-80 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-2 text-white bg-black bg-opacity-40 hover:bg-opacity-80 rounded-full opacity-0 md:group-hover:opacity-100 hidden md:block transition-all duration-300"
         aria-label="Next Slide"
       >
         <ChevronRight className="w-6 h-6" />

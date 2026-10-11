@@ -117,7 +117,7 @@ export default function OrderSuccess() {
               Continue Shopping
             </Link>
             <a
-              href={`https://wa.me/923033333705?text=Hello%20Fatima%20Khan%20Official,%20I%20have%20an%20inquiry%20regarding%20my%20Order%20${order?.orderNumber || orderNumber}`}
+              href={`https://wa.me/923172043468?text=Hello%20Mirha%20Fashion,%20I%20have%20an%20inquiry%20regarding%20my%20Order%20${order?.orderNumber || orderNumber}`}
               target="_blank"
               rel="noreferrer"
               className="w-full sm:w-auto px-6 py-3 bg-green-600 hover:bg-green-700 text-white text-xs uppercase tracking-widest font-semibold flex items-center justify-center space-x-2 transition"

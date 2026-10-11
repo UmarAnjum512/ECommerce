@@ -10,19 +10,19 @@ export function AboutUs() {
           The Label
         </span>
         <h1 className="font-serif text-3xl md:text-4xl tracking-widest uppercase text-center text-neutral-900 font-normal mb-8">
-          ABOUT FATIMA KHAN
+          ABOUT MIRHA FASHION
         </h1>
         <div className="w-16 h-px bg-neutral-300 mx-auto mb-10"></div>
 
         <div className="space-y-6 text-xs text-neutral-600 leading-relaxed font-light text-justify">
           <p>
-            Fatima Khan is a premier Pakistani clothing label founded by creative director Fatima Khan in 2012. Over more than a decade, the Fatima Khan label has carved a distinctive signature in haute couture, luxury pret, and bespoke bridal wear.
+            Mirha Fashion is a premier Pakistani clothing label founded by creative director Mirha Fashion in 2012. Over more than a decade, the Mirha Fashion label has carved a distinctive signature in haute couture, luxury pret, and bespoke bridal wear.
           </p>
           <p>
             The label is celebrated for its exclusive style, creative fabric manipulation techniques, fascinating jewel-toned color combinations, and a prestigious, royal aura. Each creation reflects meticulous artisanal craftsmanship—from hand-done zardozi, kora, and dabka needlesmithing to traditional block prints, mirrorwork, and resham thread embroideries on pure raw silks, organza, and chiffons.
           </p>
           <p>
-            Our core mission is to empower women through timeless silhouettes that express joy, grandeur, and feminine strength. Headquartered in Lahore, Pakistan, Fatima Khan garments are cherished by clients worldwide across the United States, United Kingdom, Canada, the Middle East, and Australia.
+            Our core mission is to empower women through timeless silhouettes that express joy, grandeur, and feminine strength. Headquartered in Lahore, Pakistan, Mirha Fashion garments are cherished by clients worldwide across the United States, United Kingdom, Canada, the Middle East, and Australia.
           </p>
         </div>
       </div>
@@ -68,11 +68,11 @@ export function ContactUs() {
             <div className="space-y-4 text-neutral-700">
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-fk-gold" />
-                <span>WhatsApp / Phone: +92 303 3333705</span>
+                <span>WhatsApp / Phone: +92 317 2043468</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-fk-gold" />
-                <span>Email: contact@fatimakhanofficial.com</span>
+                <span>Email: contact@mirhafashion.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-fk-gold" />
@@ -82,7 +82,7 @@ export function ContactUs() {
 
             <div className="pt-4">
               <a
-                href="https://wa.me/923033333705"
+                href="https://wa.me/923172043468"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center space-x-2 py-3 px-6 bg-green-600 hover:bg-green-700 text-white uppercase tracking-wider font-semibold rounded shadow transition"
@@ -166,7 +166,7 @@ export function FAQs() {
   const faqs = [
     {
       q: 'Do you ship internationally?',
-      a: 'Yes, Fatima Khan Official ships worldwide including the United States, United Kingdom, UAE, Canada, and Europe via tracked express courier (DHL / FedEx). Free international shipping is provided on orders over $200.',
+      a: 'Yes, Mirha Fashion ships worldwide including the United States, United Kingdom, UAE, Canada, and Europe via tracked express courier (DHL / FedEx). Free international shipping is provided on orders over $200.',
     },
     {
       q: 'How do I know what size or shirt length to choose?',

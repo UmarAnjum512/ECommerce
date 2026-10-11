@@ -459,11 +459,11 @@ const seedDatabase = async () => {
 
     // Seed Users
     const adminUser = await User.create({
-      name: 'Fatima Khan Admin',
+      name: 'Mirha Fashion Admin',
       email: 'admin@fatimakhan.com',
       password: 'admin123',
       role: 'admin',
-      phone: '+923033333705',
+      phone: '+923172043468',
     });
 
     const demoUser = await User.create({

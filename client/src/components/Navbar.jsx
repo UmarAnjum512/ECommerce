@@ -84,9 +84,9 @@ export default function Navbar() {
 
       {/* 2. Main Header Top Area */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-2 h-16 sm:h-20">
           {/* Left: Mobile Menu Trigger & Currency Selector */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2 sm:space-x-4 justify-self-start">
             <button
               onClick={() => setMobileMenuOpen(true)}
               className="lg:hidden p-2 text-neutral-800 hover:text-black"
@@ -112,19 +112,19 @@ export default function Navbar() {
           </div>
 
           {/* Center: Brand Luxury Logo */}
-          <div className="text-center">
+          <div className="text-center justify-self-center min-w-0">
             <Link to="/" className="inline-block group">
-              <span className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-widest uppercase text-neutral-900 block font-normal leading-tight group-hover:opacity-85 transition-opacity">
-                FATIMA KHAN
+              <span className="font-serif text-[17px] min-[400px]:text-xl sm:text-2xl md:text-3xl lg:text-4xl tracking-wider sm:tracking-widest uppercase text-neutral-900 block font-normal leading-tight whitespace-nowrap group-hover:opacity-85 transition-opacity">
+                MIRHA FASHION
               </span>
-              <span className="text-[9px] md:text-[10px] tracking-widest3 uppercase text-neutral-500 block font-light -mt-1">
+              <span className="text-[7px] sm:text-[9px] md:text-[10px] tracking-[0.25em] sm:tracking-widest3 uppercase text-neutral-500 block font-light -mt-0.5">
                 OFFICIAL COUTURE
               </span>
             </Link>
           </div>
 
           {/* Right: Icons (Search, Account, Cart, WhatsApp) */}
-          <div className="flex items-center space-x-3 md:space-x-5 text-neutral-800">
+          <div className="flex items-center justify-self-end space-x-0.5 sm:space-x-3 md:space-x-5 text-neutral-800">
             {/* Admin Badge link if logged in as admin */}
             {isAdmin && (
               <Link
@@ -195,7 +195,7 @@ export default function Navbar() {
                   ) : (
                     <>
                       <div className="px-4 py-2 border-b border-neutral-100 text-neutral-500">
-                        Welcome to Fatima Khan
+                        Welcome to Mirha Fashion
                       </div>
                       <Link
                         to="/login"
@@ -229,7 +229,7 @@ export default function Navbar() {
 
             {/* WhatsApp Direct Chat */}
             <a
-              href="https://wa.me/923033333705?text=Hello%20Fatima%20Khan%20Official,%20I%20have%20an%20inquiry"
+              href="https://wa.me/923172043468?text=Hello%20Mirha%20Fashion,%20I%20have%20an%20inquiry"
               target="_blank"
               rel="noreferrer"
               className="p-1.5 hover:text-green-600 transition-colors hidden sm:block"
@@ -313,7 +313,7 @@ export default function Navbar() {
           <div className="relative w-4/5 max-w-sm bg-white h-full shadow-2xl flex flex-col justify-between overflow-y-auto">
             <div className="p-5">
               <div className="flex items-center justify-between pb-4 border-b border-neutral-200">
-                <span className="font-serif text-lg tracking-widest uppercase">FATIMA KHAN</span>
+                <span className="font-serif text-lg tracking-widest uppercase">MIRHA FASHION</span>
                 <button
                   onClick={() => setMobileMenuOpen(false)}
                   className="p-1 text-neutral-600 hover:text-black"
@@ -373,7 +373,7 @@ export default function Navbar() {
             {/* Mobile Footer */}
             <div className="p-5 border-t border-neutral-200 bg-neutral-50 text-xs">
               <a
-                href="https://wa.me/923033333705"
+                href="https://wa.me/923172043468"
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center justify-center space-x-2 w-full py-2.5 bg-green-600 text-white font-medium uppercase tracking-wider rounded text-center mb-3"

@@ -166,7 +166,7 @@ export default function FlyoutCart() {
               <form onSubmit={handleApplyCoupon} className="flex space-x-2">
                 <input
                   type="text"
-                  placeholder="Coupon (e.g. FATIMA10)"
+                  placeholder="Coupon (e.g. MIRHA10)"
                   value={inputCoupon}
                   onChange={(e) => setInputCoupon(e.target.value)}
                   className="flex-1 text-xs border border-neutral-300 py-1.5 px-3 uppercase tracking-wider focus:outline-none focus:border-black bg-white"

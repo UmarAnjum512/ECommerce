@@ -25,7 +25,7 @@ export default function AdminLayout() {
           <ShieldCheck className="w-12 h-12 text-red-600 mx-auto mb-3" />
           <h2 className="font-serif text-2xl uppercase tracking-wider mb-2">Admin Access Required</h2>
           <p className="text-xs text-neutral-500 mb-6">
-            You must be authenticated with administrative privileges to view the Fatima Khan management panel.
+            You must be authenticated with administrative privileges to view the Mirha Fashion management panel.
           </p>
           <button
             onClick={() => navigate('/login', { state: { from: '/admin' } })}
@@ -56,7 +56,7 @@ export default function AdminLayout() {
           <div className="p-6 border-b border-neutral-800">
             <Link to="/" className="block">
               <span className="font-serif text-xl tracking-widest uppercase block text-white font-normal">
-                FATIMA KHAN
+                MIRHA FASHION
               </span>
               <span className="text-[9px] tracking-widest3 uppercase text-fk-gold block -mt-0.5">
                 ADMIN CONSOLE

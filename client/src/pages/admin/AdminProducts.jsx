@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useAuth } from '../../context/AuthContext';
 import { useCurrency } from '../../context/CurrencyContext';
 import { Plus, Edit2, Trash2, Search, X, Check, Eye } from 'lucide-react';
+import ImageUploader from '../../components/ImageUploader';
 
 export default function AdminProducts() {
   const { user } = useAuth();
@@ -25,7 +26,7 @@ export default function AdminProducts() {
     collectionName: "Endless Summer '26",
     price: 0,
     originalPrice: 0,
-    images: '',
+    images: [],
     hoverImage: '',
     sizes: 'XS, S, M, L, XL, Custom',
     heightOptions: 'Standard (45-48 inches), Tall (54-56 inches), Custom Length',
@@ -64,8 +65,8 @@ export default function AdminProducts() {
       collectionName: "Endless Summer '26",
       price: 150,
       originalPrice: 180,
-      images: 'https://www.fatimakhanofficial.com/images/thumbs/0010448_midnight-kaftan_1000.jpeg',
-      hoverImage: 'https://www.fatimakhanofficial.com/images/thumbs/0010449_midnight-kaftan_700.jpeg',
+      images: [],
+      hoverImage: '',
       sizes: 'XS, S, M, L, XL, Custom',
       heightOptions: 'Standard (45-48 inches), Tall (54-56 inches), Custom Length',
       addons: 'Matching Silk Pants:35, Silk Dupatta:45',
@@ -90,7 +91,7 @@ export default function AdminProducts() {
       collectionName: prod.collectionName || '',
       price: prod.price,
       originalPrice: prod.originalPrice || 0,
-      images: prod.images ? prod.images.join(', ') : '',
+      images: prod.images ? [...prod.images] : [],
       hoverImage: prod.hoverImage || '',
       sizes: prod.sizes ? prod.sizes.join(', ') : 'XS, S, M, L, XL, Custom',
       heightOptions: prod.heightOptions ? prod.heightOptions.join(', ') : '',
@@ -136,10 +137,7 @@ export default function AdminProducts() {
         : [];
 
       // Parse images array
-      const parsedImages = formData.images
-        .split(',')
-        .map((img) => img.trim())
-        .filter(Boolean);
+      const parsedImages = formData.images;
 
       const payload = {
         ...formData,
@@ -183,7 +181,7 @@ export default function AdminProducts() {
             Product Catalogue
           </h2>
           <p className="text-xs text-neutral-500 font-light">
-            Manage Fatima Khan designer creations, pricing, add-ons, and availability.
+            Manage Mirha Fashion designer creations, pricing, add-ons, and availability.
           </p>
         </div>
         <button
@@ -422,26 +420,13 @@ export default function AdminProducts() {
               </div>
 
               <div>
-                <label className="block text-neutral-600 mb-1">Images (Comma separated URLs) *</label>
-                <textarea
-                  rows="2"
-                  required
-                  value={formData.images}
-                  onChange={(e) => setFormData({ ...formData, images: e.target.value })}
-                  className="w-full border border-neutral-300 p-2 focus:border-black focus:outline-none font-mono text-[11px]"
-                  placeholder="https://...1.jpeg, https://...2.jpeg"
-                ></textarea>
+                <label className="block text-neutral-600 mb-1">Product Images * (pehli image main hogi)</label>
+                <ImageUploader multiple required value={formData.images} onChange={(urls) => setFormData({ ...formData, images: urls })} />
               </div>
 
               <div>
-                <label className="block text-neutral-600 mb-1">Hover Image URL (2nd image displayed on hover)</label>
-                <input
-                  type="text"
-                  value={formData.hoverImage}
-                  onChange={(e) => setFormData({ ...formData, hoverImage: e.target.value })}
-                  className="w-full border border-neutral-300 p-2 focus:border-black focus:outline-none font-mono text-[11px]"
-                  placeholder="https://...hover.jpeg"
-                />
+                <label className="block text-neutral-600 mb-1">Hover Image (2nd image displayed on hover)</label>
+                <ImageUploader value={formData.hoverImage} onChange={(url) => setFormData({ ...formData, hoverImage: url })} />
               </div>
 
               <div>

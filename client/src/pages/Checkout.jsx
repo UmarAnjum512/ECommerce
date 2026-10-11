@@ -100,7 +100,7 @@ export default function Checkout() {
           </div>
         )}
 
-        <form onSubmit={handleSubmit} className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <form onSubmit={handleSubmit} className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
           {/* Left Column: Customer & Shipping (7 cols) */}
           <div className="lg:col-span-7 bg-white p-8 border border-neutral-200 shadow-sm space-y-8">
             {/* 1. Contact Information */}
@@ -253,7 +253,7 @@ export default function Checkout() {
                   <Building2 className="w-5 h-5 text-neutral-700" />
                   <div>
                     <span className="font-semibold text-neutral-900 block">Direct Bank Wire / Online Transfer</span>
-                    <span className="text-neutral-500 text-[11px]">Transfer to Fatima Khan Official HBL / Meezan Bank account.</span>
+                    <span className="text-neutral-500 text-[11px]">Transfer to Mirha Fashion HBL / Meezan Bank account.</span>
                   </div>
                 </label>
 
