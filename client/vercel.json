@@ -7,11 +7,11 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://YOUR-BACKEND-URL.onrender.com/api/:path*"
+      "destination": "https://e-commerce-6a4o.vercel.app.onrender.com/api/:path*"
     },
     {
       "source": "/uploads/:path*",
-      "destination": "https://YOUR-BACKEND-URL.onrender.com/uploads/:path*"
+      "destination": "https://e-commerce-6a4o.vercel.app.onrender.com/uploads/:path*"
     },
     {
       "source": "/((?!api/|uploads/|assets/).*)",
